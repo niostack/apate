@@ -27,12 +27,13 @@ serviceHost:
 * 请求路径：`POST /`
 * 请求头：`Content-Type: application/json`
 * 请求参数：
-1. `service`        后端服务标识，例如：host1、host2、host3
-2. `path`           后端服务接口路径，例如：/helloword
-3. `method`         请求后端服务的方法，例如：POST、GET
-4. `contentType`    请求后端的请求参数类型，例如：application/json
-5. `headers`        请求后端的请求头，例如：{Content-Type: application/json}
-6. `params`         请求后端的请求参数，例如：{k1:v1,k2:v2}
+> `service`        后端服务标识，例如：host1、host2、host3
+> `port`           后端服务端口
+> `path`           后端服务接口路径，例如：/helloword
+> `method`         请求后端服务的方法，例如：POST、GET
+> `contentType`    请求后端的请求参数类型，例如：application/json
+> `headers`        请求后端的请求头，例如：{Content-Type: application/json}
+> `params`         请求后端的请求参数，例如：{k1:v1,k2:v2}
 
 ##### 注意：客户端需要使用AES加密请求body，并使用AES解密响应body
 ```
