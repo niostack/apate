@@ -133,6 +133,7 @@ public class ProxyRequestGatewayFilterFactory extends AbstractGatewayFilterFacto
             if (config.encryptEnable) {
                 body = AESUtil.decrypt(originalBody, config.getEncryptKey());
             }
+            log.info("parse body success. originalBody: {}, body: {}", originalBody, body);
             return mapper.readValue(body, ProxyConfig.class);
         } catch (Exception e) {
             log.error("parse body error. originalBody: {}, exception: {}", originalBody, e);
