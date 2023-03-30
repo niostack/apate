@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  boast_me:
+    build: .
+    container_name: apate
+    ports:
+      - "10001:10001"
+    image: openjdk:11-jre-slim
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./src:/app
+    command: >
+      sh -c "mvn clean package -DskipTests && java -jar target/*.jar"
+    environment:
+      - TZ=Asia/Shanghai
