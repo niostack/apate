@@ -20,7 +20,7 @@ spring:
                 encrypt: AES
                 encryptKey: ABCD12345678EFGH
                 serviceHost:
-                  test1: http://jsonplaceholder.typicode.com
+                  openai: http://127.0.0.1:5000
             - name: ProxyResponse
               args:
                 encryptEnable: true
