@@ -1,0 +1,29 @@
+server:
+  port: 10001
+logging:
+  level:
+    root: info
+spring:
+  application:
+    name: apate
+  cloud:
+    gateway:
+      routes:
+        - id: proxy
+          uri: http://127.0.0.1
+          predicates:
+            - Path=/
+          filters:
+            - name: ProxyRequest
+              args:
+                encryptEnable: true
+                encrypt: AES
+                encryptKey: ABCD12345678EFGH
+                serviceHost:
+                  test1: http://jsonplaceholder.typicode.com
+            - name: ProxyResponse
+              args:
+                encryptEnable: true
+                encrypt: AES
+                encryptKey: ABCD12345678EFGH
+
