@@ -1,7 +1,6 @@
 version: "3.8"
 services:
-  boast_me:
-    build: .
+  apate:
     container_name: apate
     ports:
       - "10001:10001"
